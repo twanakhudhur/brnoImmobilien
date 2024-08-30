@@ -14,7 +14,7 @@ nav {
     }
 
     &:hover {
-      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
     }
   }
 
@@ -64,6 +64,7 @@ nav {
 
     .register {
       background-color: $primary-color;
+      border-radius: 5px;
     }
 
     .menuIcon {
@@ -116,8 +117,8 @@ nav {
 
       @include sm {
         display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
     .menu {
