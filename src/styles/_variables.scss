@@ -1,15 +1,4 @@
-$light-bg-color: #ffffff;
-$light-text-color: #000000;
-
-$dark-bg-color: #121212;
-$dark-text-color: #ffffff;
-
-:root {
-  --bg-color: #{$light-bg-color};
-  --text-color: #{$light-text-color};
-}
-
-[data-theme='dark'] {
-  --bg-color: #{$dark-bg-color};
-  --text-color: #{$dark-text-color};
-}
+$background-color: #00712D;
+$primary-color: #FF9100;
+$secondary-color: #D5ED9F;
+$text-color: #FFFBE6;

@@ -1,4 +1,4 @@
-@import './variables';
+
 
 html {
   scroll-behavior: smooth;
@@ -12,13 +12,12 @@ html {
   transition-duration: 0.1s;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
   font-family: "Lato", sans-serif;
   overflow: hidden;
 }
-
