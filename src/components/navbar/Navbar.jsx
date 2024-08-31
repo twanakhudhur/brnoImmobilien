@@ -1,25 +1,26 @@
 import { useState } from "react";
 import "./navbar.scss";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link href="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>BrnoImmobilien</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        </Link>
+        <Link href="/">Home</Link>
+        <Link href="/">About</Link>
+        <Link href="/">Contact</Link>
+        <Link href="/">Agents</Link>
       </div>
       <div className="right">
-        <a href="/">Sign in</a>
-        <a href="/" className="register">
+        <Link href="/">Sign in</Link>
+        <Link href="/" className="register">
           Sign up
-        </a>
+        </Link>
         <div
           className={`menuIcon ${open ? "open" : ""}`}
           onClick={() => setOpen((prev) => !prev)}
@@ -29,12 +30,12 @@ export default function Navbar() {
           <div className="bar"></div>
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <Link href="/">Home</Link>
+          <Link href="/">About</Link>
+          <Link href="/">Contact</Link>
+          <Link href="/">Agents</Link>
+          <Link href="/">Sign in</Link>
+          <Link href="/">Sign up</Link>
         </div>
       </div>
     </nav>
