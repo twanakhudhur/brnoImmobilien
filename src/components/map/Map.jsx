@@ -45,10 +45,12 @@ const ResetViewButton = ({ initialPosition, initialZoom }) => {
       style={{
         position: "absolute",
         backgroundColor: "rgba(255, 255, 255, 0.8)",
-        padding: "5px",
         cursor: "pointer",
-        width: "25px",
-        height: "25px",
+        width: "20px",
+        height: "20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         borderRadius: "50%",
         top: "10px",
         right: "10px",
@@ -56,7 +58,7 @@ const ResetViewButton = ({ initialPosition, initialZoom }) => {
         zIndex: 1000,
       }}
     >
-      <img src="/refresh.png" width={"100%"} alt="refresh" />
+      <img src="/refresh.png" width={"60%"} alt="refresh" />
     </button>
   );
 };
