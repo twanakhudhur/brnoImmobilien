@@ -4,9 +4,10 @@ import "leaflet/dist/leaflet.css";
 import Pin from "../pin/Pin";
 
 function Map({ items }) {
-  const initialPosition = items.length === 1
-  ? [items[0].latitude, items[0].longitude]
-  : [52.4797, -1.90269];
+  const initialPosition =
+    items.length === 1
+      ? [items[0].latitude, items[0].longitude]
+      : [52.4797, -1.90269];
   const initialZoom = 7;
 
   return (
