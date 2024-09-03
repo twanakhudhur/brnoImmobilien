@@ -72,7 +72,7 @@ function ProfileUpdate() {
             uploadPreset: "brnoImmobilien",
             multiple: false,
             maxImageFileSize: 2000000,
-            folder: "brnoImmobilien",
+            folder: "brnoImmobilien/profile",
           }}
           setState={setAvatar}
         />
