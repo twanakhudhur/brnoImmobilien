@@ -62,7 +62,6 @@ export const getPost = async (req, res) => {
         return res.status(200).json({ ...post, isSaved: !!saved });
       });
     } else {
-      // If no token is provided, return the post without the saved status
       return res.status(200).json({ ...post, isSaved: false });
     }
   } catch (err) {
