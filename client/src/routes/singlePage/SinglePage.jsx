@@ -17,9 +17,24 @@ function SinglePage() {
     if (!currentUser) {
       navigate("/login");
     }
+    // AFTER REACT 19 UPDATE TO USEOPTIMISTIK HOOK
     setSaved((prev) => !prev);
     try {
       await apiRequest.post("/users/save", { postId: post.id });
+    } catch (err) {
+      console.log(err);
+      setSaved((prev) => !prev);
+    }
+  };
+  const handleAddChat = async () => {
+    if (!currentUser) {
+      navigate("/login");
+    }
+    // AFTER REACT 19 UPDATE TO USEOPTIMISTIK HOOK
+    
+    try {
+      await apiRequest.post("/chats", { receiverId: post.user.id });
+      navigate("/profile");
     } catch (err) {
       console.log(err);
       setSaved((prev) => !prev);
@@ -138,7 +153,7 @@ function SinglePage() {
             <Map items={[post]} />
           </div>
           <div className="buttons">
-            <button>
+            <button onClick={handleAddChat}>
               <img src="/chat.png" alt="" />
               Send a Message
             </button>

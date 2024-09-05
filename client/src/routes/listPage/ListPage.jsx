@@ -1,10 +1,11 @@
-import { Await, useLoaderData } from "react-router-dom";
-import Card from "../../components/card/Card";
-import Filter from "../../components/filter/Filter";
-import Map from "../../components/map/Map";
 import "./listPage.scss";
+import Filter from "../../components/filter/Filter";
+import Card from "../../components/card/Card";
+import Map from "../../components/map/Map";
+import { Await, useLoaderData } from "react-router-dom";
 import { Suspense } from "react";
-export default function ListPage() {
+
+function ListPage() {
   const data = useLoaderData();
 
   return (
@@ -39,3 +40,5 @@ export default function ListPage() {
     </div>
   );
 }
+
+export default ListPage;
